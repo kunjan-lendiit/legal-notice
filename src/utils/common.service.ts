@@ -13,11 +13,9 @@ export class CommonService {
       return oldRate;
     }
   }
-
   getRandomId() {
     return 'lenditt' + Math.random().toString(36).substr(2, 9) + Date.now();
   }
-
   async softapprovalFunction(
     approvedAmount: any,
     interestRate,

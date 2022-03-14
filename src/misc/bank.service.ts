@@ -18,19 +18,8 @@ export class BankServiceV1 {
         })
       )['bankName'];
     } catch (error) {
-      return;
-    }
-  }
-
-  async getBanks() {
-    try {
-      return await this.repository.findAll({
-        where: { statusFlag: '1' },
-        attributes: ['bankName', 'bankCode', 'netBankingService', 'pdfService'],
-        raw: true,
-      });
-    } catch (error) {
       return '500';
     }
   }
+
 }

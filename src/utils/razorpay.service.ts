@@ -26,11 +26,6 @@ export class RazorpayService {
       return null;
     }
   }
-
-  // async createOrder(orderData: RazorOrderCreate): Promise<any> {
-  //   return await this.razorpay.orders.create(orderData);
-  // }
-
   async fetchCardDetails(payment_id: string): Promise<any> {
     return await this.apiService.get(
       `${RAZORPAY_API_URL}payments/${payment_id}/?expand[]=card`,
@@ -77,40 +72,6 @@ export class RazorpayService {
       },
     );
   }
-
-  // async cancelPayoutById(payoutId: string) {
-  //   return await this.httpService
-  //     .post(`https://api.razorpay.com/v1/payouts/${payoutId}/cancel`, null, {
-  //       auth: {
-  //         username: this.key_id,
-  //         password: this.key_secret,
-  //       },
-  //     })
-  //     .toPromise();
-  // }
-
-  // async createPaylink(paylinkData: CreatePaylink) {
-  //   return await this.httpService
-  //     .post(`https://api.razorpay.com/v1/payment_links/`, paylinkData, {
-  //       auth: {
-  //         username: this.key_id,
-  //         password: this.key_secret,
-  //       },
-  //     })
-  //     .toPromise();
-  // }
-
-  // async fetchPaylink(paylinkId: string) {
-  //   return await this.httpService
-  //     .get(`https://api.razorpay.com/v1/payment_links/${paylinkId}`, {
-  //       auth: {
-  //         username: this.key_id,
-  //         password: this.key_secret,
-  //       },
-  //     })
-  //     .toPromise();
-  // }
-
   async createRazorPaylink(
     amount: number,
     loanId: number,

@@ -23,7 +23,6 @@ import { employmentDesignation } from 'src/entities/designation.entity';
 import { disbursementEntity } from 'src/entities/disbursement.entity';
 import { LinkedInEntity } from 'src/entities/linkedIn.entity';
 import { EmploymentHistoryDetailsEntity } from 'src/entities/employment.history.entity';
-import { userHistory } from 'src/entities/user.history.entity';
 import { ChatDocumentEntity } from 'src/entities/media.entity';
 import { trackUser } from 'src/entities/track.entity';
 import { userNetBankingDetails } from 'src/entities/netBanking.entity';
@@ -43,7 +42,6 @@ import { GoogleCoordinatesEntity } from 'src/entities/googleCoordinates.entity';
 import { SubScriptionEntity } from 'src/entities/subscription.entity';
 import { esignEntity } from 'src/entities/esign.entity';
 import { crmActivity } from 'src/entities/crm.entity';
-import { AdminloggerEntity } from 'src/entities/adminlogger.entity';
 import { stamp } from 'src/entities/stamp.entity';
 import { device } from 'src/entities/device.entity';
 import { TransactionEntity } from 'src/entities/transaction.entity';
@@ -92,13 +90,11 @@ export const DatabaseProvider = [
         stamp,
         SubScriptionEntity,
         UPIEntity,
-        userHistory,
         userLoanDecline,
         trackUser,
         NetHistoryEntity,
         BankingEntity,
         GoogleCoordinatesEntity,
-        AdminloggerEntity,
         device,
         TransactionEntity,
       ];

@@ -40,7 +40,6 @@ import {
   } from 'src/constants/entities';
   import { trackUser } from 'src/entities/track.entity';
   import { registeredUsers } from 'src/entities/user.entity';
-  import { userHistory } from 'src/entities/user.history.entity';
   import { employmentDetails } from 'src/entities/employment.entity';
   import { ChatDocumentEntity } from 'src/entities/media.entity';
   import { loanTransaction } from 'src/entities/loan.entity';
@@ -68,7 +67,6 @@ import {
   import { SubScriptionEntity } from 'src/entities/subscription.entity';
   import { esignEntity } from 'src/entities/esign.entity';
   import { crmActivity } from 'src/entities/crm.entity';
-  import { AdminloggerEntity } from 'src/entities/adminlogger.entity';
   import { stamp } from 'src/entities/stamp.entity';
   import { TransactionEntity } from 'src/entities/transaction.entity';
   import { contactDetailEntity } from 'src/entities/contact.entity';
@@ -95,10 +93,7 @@ import {
       provide: TRACKUSER_REPOSITORY,
       useValue: trackUser,
     },
-    {
-      provide: USERHISTORY_REPOSITORY,
-      useValue: userHistory,
-    },
+  
   
     //Employment
     {
@@ -247,10 +242,7 @@ import {
       provide: ESIGN_REPOSITORY,
       useValue: esignEntity,
     },
-    {
-      provide: ADMINLOGGERENTITY_REPOSITORY,
-      useValue: AdminloggerEntity,
-    },
+
     {
       provide: STAMP_REPOSITORY,
       useValue: stamp,
